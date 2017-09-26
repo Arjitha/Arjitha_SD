@@ -1,0 +1,102 @@
+@model Arjitha.Models.ArjithaEmployees
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ArjithaEmployees</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Role)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Role)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FirstName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.LastName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.LastName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Gendar)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Gendar)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DOJ)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DOJ)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DOR)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DOR)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Prvs_Org)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Prvs_Org)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Qualifications)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Qualifications)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DocsSubmitted)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DocsSubmitted)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.AE_WorkRating)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AE_WorkRating)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.LoginID)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.LoginID)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Password)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Password)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.LastLogin)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.LastLogin)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Remarks)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Remarks)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.AEID">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

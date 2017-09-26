@@ -1,0 +1,71 @@
+@model IEnumerable<Arjitha.Models.FlatOwnerDetails>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.OwnerFirstName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.OwnerLastName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.OwnerAddress)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.OwnerContactNumber)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.OwnerAlternateContactNumber)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.OwnerEmail)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Remarks)
+                </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.OwnerFirstName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OwnerLastName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OwnerAddress)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OwnerContactNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OwnerAlternateContactNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OwnerEmail)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Remarks)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.OwnerID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.OwnerID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.OwnerID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

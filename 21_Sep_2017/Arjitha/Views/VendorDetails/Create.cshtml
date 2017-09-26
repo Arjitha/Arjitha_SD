@@ -1,0 +1,126 @@
+@model Arjitha.Models.VendorDetails
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h2>Create</h2>
+
+<form asp-action="Create">
+    <div class="form-horizontal">
+        <h4>VendorDetails</h4>
+        <hr />
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="form-group">
+            <label asp-for="VendorType" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="VendorType" class="form-control" />
+                <span asp-validation-for="VendorType" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="VendorName" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="VendorName" class="form-control" />
+                <span asp-validation-for="VendorName" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="VendorPhoto" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="VendorPhoto" class="form-control" />
+                <span asp-validation-for="VendorPhoto" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="VendorGps" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="VendorGps" class="form-control" />
+                <span asp-validation-for="VendorGps" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="ItemsAvailable" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="ItemsAvailable" class="form-control" />
+                <span asp-validation-for="ItemsAvailable" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="VendorContactNumber" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="VendorContactNumber" class="form-control" />
+                <span asp-validation-for="VendorContactNumber" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="VendorAlternateConatactNumber" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="VendorAlternateConatactNumber" class="form-control" />
+                <span asp-validation-for="VendorAlternateConatactNumber" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="VendorEmail" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="VendorEmail" class="form-control" />
+                <span asp-validation-for="VendorEmail" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="VendorAddress" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="VendorAddress" class="form-control" />
+                <span asp-validation-for="VendorAddress" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Password" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Password" class="form-control" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Hint" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Hint" class="form-control" />
+                <span asp-validation-for="Hint" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Remarks" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Remarks" class="form-control" />
+                <span asp-validation-for="Remarks" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Rating" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Rating" class="form-control" />
+                <span asp-validation-for="Rating" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Govt_ID_Proof" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Govt_ID_Proof" class="form-control" />
+                <span asp-validation-for="Govt_ID_Proof" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+</form>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

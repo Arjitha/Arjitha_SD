@@ -1,0 +1,107 @@
+@model IEnumerable<Arjitha.Models.ServiceRequest>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.IssueDescription)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ServiceRequestSatus)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ServiceRequestDate)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Resident_ID)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ServiceRequestHandlingStatus)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ServiceRequestResolvedOn)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ServiceRequestLastSeen)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ServiceCharges)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ServiceChargesPaid)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.PaymentDue)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.VendorID)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.QuoteID)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Remarks)
+                </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.IssueDescription)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ServiceRequestSatus)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ServiceRequestDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Resident_ID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ServiceRequestHandlingStatus)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ServiceRequestResolvedOn)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ServiceRequestLastSeen)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ServiceCharges)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ServiceChargesPaid)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PaymentDue)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VendorID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.QuoteID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Remarks)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.ServiceRequestID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.ServiceRequestID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.ServiceRequestID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

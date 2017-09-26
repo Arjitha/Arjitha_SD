@@ -1,0 +1,107 @@
+@model Arjitha.Models.FlatDetails
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>FlatDetails</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <input type="hidden" asp-for="Flat_ID" />
+        <dt>
+            @Html.DisplayNameFor(model => model.Flat_No)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Flat_No)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Floor)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Floor)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Block)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Block)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FlatBuyDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FlatBuyDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.BHKs)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.BHKs)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CurrentStatus)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CurrentStatus)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FlatInchargeFirstName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FlatInchargeFirstName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FlatInchargeLastName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FlatInchargeLastName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FlatInchargeContactNumber)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FlatInchargeContactNumber)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FlatInchargeAlternateContactNumber)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FlatInchargeAlternateContactNumber)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FlatInchargeEmail)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FlatInchargeEmail)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.AnnualMaintainaceCharges)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AnnualMaintainaceCharges)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.OwnerID)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.OwnerID)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Remarks)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Remarks)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            <a asp-action="Index">Back to List</a>
+        </div>
+    </form>
+</div>

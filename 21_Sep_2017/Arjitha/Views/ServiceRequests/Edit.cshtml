@@ -1,0 +1,120 @@
+@model Arjitha.Models.ServiceRequest
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2>Edit</h2>
+
+<form asp-action="Edit">
+    <div class="form-horizontal">
+        <h4>ServiceRequest</h4>
+        <hr />
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <input type="hidden" asp-for="ServiceRequestID" />
+        <div class="form-group">
+            <label asp-for="IssueDescription" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="IssueDescription" class="form-control" />
+                <span asp-validation-for="IssueDescription" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="ServiceRequestSatus" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="ServiceRequestSatus" class="form-control" />
+                <span asp-validation-for="ServiceRequestSatus" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="ServiceRequestDate" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="ServiceRequestDate" class="form-control" />
+                <span asp-validation-for="ServiceRequestDate" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Resident_ID" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Resident_ID" class="form-control" />
+                <span asp-validation-for="Resident_ID" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="ServiceRequestHandlingStatus" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="ServiceRequestHandlingStatus" class="form-control" />
+                <span asp-validation-for="ServiceRequestHandlingStatus" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="ServiceRequestResolvedOn" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="ServiceRequestResolvedOn" class="form-control" />
+                <span asp-validation-for="ServiceRequestResolvedOn" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="ServiceRequestLastSeen" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="ServiceRequestLastSeen" class="form-control" />
+                <span asp-validation-for="ServiceRequestLastSeen" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="ServiceCharges" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="ServiceCharges" class="form-control" />
+                <span asp-validation-for="ServiceCharges" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="ServiceChargesPaid" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="ServiceChargesPaid" class="form-control" />
+                <span asp-validation-for="ServiceChargesPaid" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="PaymentDue" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="PaymentDue" class="form-control" />
+                <span asp-validation-for="PaymentDue" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="VendorID" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="VendorID" class="form-control" />
+                <span asp-validation-for="VendorID" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="QuoteID" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="QuoteID" class="form-control" />
+                <span asp-validation-for="QuoteID" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Remarks" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Remarks" class="form-control" />
+                <span asp-validation-for="Remarks" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+</form>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

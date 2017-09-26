@@ -1,0 +1,71 @@
+@model IEnumerable<Arjitha.Models.ServiceRequestChild>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.HandyMan_ID)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ServiceRequestImage)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ServiceRequestDesc)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ServiceRequestStatus)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ServiceRequestStartDate)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ServiceRequestEndDate)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Remarks)
+                </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.HandyMan_ID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ServiceRequestImage)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ServiceRequestDesc)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ServiceRequestStatus)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ServiceRequestStartDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ServiceRequestEndDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Remarks)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.ServiceRequest_ID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.ServiceRequest_ID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.ServiceRequest_ID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

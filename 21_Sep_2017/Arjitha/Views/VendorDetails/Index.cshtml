@@ -1,0 +1,113 @@
+@model IEnumerable<Arjitha.Models.VendorDetails>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.VendorType)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.VendorName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.VendorPhoto)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.VendorGps)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ItemsAvailable)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.VendorContactNumber)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.VendorAlternateConatactNumber)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.VendorEmail)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.VendorAddress)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Password)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Hint)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Remarks)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Rating)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Govt_ID_Proof)
+                </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.VendorType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VendorName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VendorPhoto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VendorGps)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ItemsAvailable)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VendorContactNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VendorAlternateConatactNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VendorEmail)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VendorAddress)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Password)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Hint)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Remarks)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Rating)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Govt_ID_Proof)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.VendorID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.VendorID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.VendorID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

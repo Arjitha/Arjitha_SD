@@ -1,0 +1,65 @@
+@model Arjitha.Models.ServiceRequestChild
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>ServiceRequestChild</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <input type="hidden" asp-for="ServiceRequest_ID" />
+        <dt>
+            @Html.DisplayNameFor(model => model.HandyMan_ID)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.HandyMan_ID)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ServiceRequestImage)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ServiceRequestImage)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ServiceRequestDesc)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ServiceRequestDesc)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ServiceRequestStatus)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ServiceRequestStatus)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ServiceRequestStartDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ServiceRequestStartDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ServiceRequestEndDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ServiceRequestEndDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Remarks)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Remarks)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            <a asp-action="Index">Back to List</a>
+        </div>
+    </form>
+</div>

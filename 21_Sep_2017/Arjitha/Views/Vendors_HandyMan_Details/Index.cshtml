@@ -1,0 +1,125 @@
+@model IEnumerable<Arjitha.Models.Vendors_HandyMan_Details>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.VendorID)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.HandyMan_FirstName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.HandyMan_LastName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.PrimaryContactNo)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.SecondaryContactNo)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Address)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Gender)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DOJ)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DOR)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Experties)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Prvs_Org)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Govt_ID_Proof)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DocsSubmitted)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Rating)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Remarks)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Photograph)
+                </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.VendorID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HandyMan_FirstName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HandyMan_LastName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PrimaryContactNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SecondaryContactNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Address)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Gender)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DOJ)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DOR)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Experties)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Prvs_Org)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Govt_ID_Proof)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DocsSubmitted)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Rating)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Remarks)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Photograph)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.HandyMan_ID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.HandyMan_ID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.HandyMan_ID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,0 +1,125 @@
+@model IEnumerable<Arjitha.Models.ResidentDetails>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Flat_ID)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ResidentFirstName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ResidentLastName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ResidentPermanentAddress)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ResidentContactNumber)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Password)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Hint)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ResidentAlternateContactNumber)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ServiceRequestCredits)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ResidentGpsLocation)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ResidentEmail)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ResidentOccupancyDate)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ResidentVacatedDate)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ResidentEmploymentDetails)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ResidentIdentityDetails)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Remarks)
+                </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Flat_ID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ResidentFirstName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ResidentLastName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ResidentPermanentAddress)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ResidentContactNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Password)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Hint)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ResidentAlternateContactNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ServiceRequestCredits)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ResidentGpsLocation)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ResidentEmail)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ResidentOccupancyDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ResidentVacatedDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ResidentEmploymentDetails)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ResidentIdentityDetails)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Remarks)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Resident_ID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Resident_ID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Resident_ID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

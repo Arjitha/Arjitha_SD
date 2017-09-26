@@ -1,0 +1,77 @@
+@model Arjitha.Models.ServiceRequestChild
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h2>Create</h2>
+
+<form asp-action="Create">
+    <div class="form-horizontal">
+        <h4>ServiceRequestChild</h4>
+        <hr />
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="form-group">
+            <label asp-for="HandyMan_ID" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="HandyMan_ID" class="form-control" />
+                <span asp-validation-for="HandyMan_ID" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="ServiceRequestImage" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="ServiceRequestImage" class="form-control" />
+                <span asp-validation-for="ServiceRequestImage" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="ServiceRequestDesc" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="ServiceRequestDesc" class="form-control" />
+                <span asp-validation-for="ServiceRequestDesc" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="ServiceRequestStatus" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="ServiceRequestStatus" class="form-control" />
+                <span asp-validation-for="ServiceRequestStatus" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="ServiceRequestStartDate" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="ServiceRequestStartDate" class="form-control" />
+                <span asp-validation-for="ServiceRequestStartDate" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="ServiceRequestEndDate" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="ServiceRequestEndDate" class="form-control" />
+                <span asp-validation-for="ServiceRequestEndDate" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Remarks" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Remarks" class="form-control" />
+                <span asp-validation-for="Remarks" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+</form>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

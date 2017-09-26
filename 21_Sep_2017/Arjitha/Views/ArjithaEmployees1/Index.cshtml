@@ -1,0 +1,113 @@
+@model IEnumerable<Arjitha.Models.ArjithaEmployees>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Role)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.FirstName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.LastName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Gendar)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DOJ)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DOR)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Prvs_Org)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Qualifications)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DocsSubmitted)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.AE_WorkRating)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.LoginID)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Password)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.LastLogin)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Remarks)
+                </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Role)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FirstName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LastName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Gendar)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DOJ)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DOR)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Prvs_Org)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Qualifications)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DocsSubmitted)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AE_WorkRating)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LoginID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Password)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LastLogin)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Remarks)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.AEID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.AEID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.AEID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

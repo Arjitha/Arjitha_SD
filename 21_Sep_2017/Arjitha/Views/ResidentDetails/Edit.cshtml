@@ -1,0 +1,141 @@
+@model Arjitha.Models.ResidentDetails
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2>Edit</h2>
+
+<form asp-action="Edit">
+    <div class="form-horizontal">
+        <h4>ResidentDetails</h4>
+        <hr />
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <input type="hidden" asp-for="Resident_ID" />
+        <div class="form-group">
+            <label asp-for="Flat_ID" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Flat_ID" class="form-control" />
+                <span asp-validation-for="Flat_ID" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="ResidentFirstName" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="ResidentFirstName" class="form-control" />
+                <span asp-validation-for="ResidentFirstName" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="ResidentLastName" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="ResidentLastName" class="form-control" />
+                <span asp-validation-for="ResidentLastName" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="ResidentPermanentAddress" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="ResidentPermanentAddress" class="form-control" />
+                <span asp-validation-for="ResidentPermanentAddress" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="ResidentContactNumber" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="ResidentContactNumber" class="form-control" />
+                <span asp-validation-for="ResidentContactNumber" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Password" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Password" class="form-control" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Hint" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Hint" class="form-control" />
+                <span asp-validation-for="Hint" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="ResidentAlternateContactNumber" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="ResidentAlternateContactNumber" class="form-control" />
+                <span asp-validation-for="ResidentAlternateContactNumber" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="ServiceRequestCredits" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="ServiceRequestCredits" class="form-control" />
+                <span asp-validation-for="ServiceRequestCredits" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="ResidentGpsLocation" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="ResidentGpsLocation" class="form-control" />
+                <span asp-validation-for="ResidentGpsLocation" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="ResidentEmail" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="ResidentEmail" class="form-control" />
+                <span asp-validation-for="ResidentEmail" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="ResidentOccupancyDate" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="ResidentOccupancyDate" class="form-control" />
+                <span asp-validation-for="ResidentOccupancyDate" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="ResidentVacatedDate" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="ResidentVacatedDate" class="form-control" />
+                <span asp-validation-for="ResidentVacatedDate" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="ResidentEmploymentDetails" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="ResidentEmploymentDetails" class="form-control" />
+                <span asp-validation-for="ResidentEmploymentDetails" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="ResidentIdentityDetails" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="ResidentIdentityDetails" class="form-control" />
+                <span asp-validation-for="ResidentIdentityDetails" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Remarks" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Remarks" class="form-control" />
+                <span asp-validation-for="Remarks" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+</form>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

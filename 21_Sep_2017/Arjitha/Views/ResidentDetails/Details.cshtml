@@ -1,0 +1,114 @@
+@model Arjitha.Models.ResidentDetails
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ResidentDetails</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Flat_ID)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Flat_ID)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ResidentFirstName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ResidentFirstName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ResidentLastName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ResidentLastName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ResidentPermanentAddress)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ResidentPermanentAddress)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ResidentContactNumber)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ResidentContactNumber)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Password)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Password)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Hint)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Hint)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ResidentAlternateContactNumber)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ResidentAlternateContactNumber)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ServiceRequestCredits)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ServiceRequestCredits)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ResidentGpsLocation)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ResidentGpsLocation)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ResidentEmail)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ResidentEmail)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ResidentOccupancyDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ResidentOccupancyDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ResidentVacatedDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ResidentVacatedDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ResidentEmploymentDetails)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ResidentEmploymentDetails)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ResidentIdentityDetails)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ResidentIdentityDetails)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Remarks)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Remarks)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Resident_ID">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

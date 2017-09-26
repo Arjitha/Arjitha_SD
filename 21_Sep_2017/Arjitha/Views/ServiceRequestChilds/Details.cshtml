@@ -1,0 +1,60 @@
+@model Arjitha.Models.ServiceRequestChild
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ServiceRequestChild</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.HandyMan_ID)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.HandyMan_ID)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ServiceRequestImage)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ServiceRequestImage)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ServiceRequestDesc)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ServiceRequestDesc)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ServiceRequestStatus)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ServiceRequestStatus)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ServiceRequestStartDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ServiceRequestStartDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ServiceRequestEndDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ServiceRequestEndDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Remarks)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Remarks)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.ServiceRequest_ID">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

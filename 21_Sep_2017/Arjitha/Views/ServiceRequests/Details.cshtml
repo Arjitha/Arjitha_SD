@@ -1,0 +1,96 @@
+@model Arjitha.Models.ServiceRequest
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ServiceRequest</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.IssueDescription)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.IssueDescription)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ServiceRequestSatus)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ServiceRequestSatus)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ServiceRequestDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ServiceRequestDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Resident_ID)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Resident_ID)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ServiceRequestHandlingStatus)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ServiceRequestHandlingStatus)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ServiceRequestResolvedOn)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ServiceRequestResolvedOn)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ServiceRequestLastSeen)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ServiceRequestLastSeen)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ServiceCharges)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ServiceCharges)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ServiceChargesPaid)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ServiceChargesPaid)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PaymentDue)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PaymentDue)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.VendorID)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.VendorID)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.QuoteID)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.QuoteID)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Remarks)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Remarks)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.ServiceRequestID">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

@@ -1,0 +1,47 @@
+@model Arjitha.Models.ResidentRechargeHistory
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>ResidentRechargeHistory</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <input type="hidden" asp-for="Resident_ID" />
+        <dt>
+            @Html.DisplayNameFor(model => model.Tran_ID)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Tran_ID)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CreditRechargeDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CreditRechargeDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.RechargeAmount)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.RechargeAmount)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Remarks)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Remarks)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            <a asp-action="Index">Back to List</a>
+        </div>
+    </form>
+</div>

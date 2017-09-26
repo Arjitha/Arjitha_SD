@@ -1,0 +1,140 @@
+@model Arjitha.Models.Vendors_HandyMan_Details
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h2>Create</h2>
+
+<form asp-action="Create">
+    <div class="form-horizontal">
+        <h4>Vendors_HandyMan_Details</h4>
+        <hr />
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="form-group">
+            <label asp-for="VendorID" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="VendorID" class="form-control" />
+                <span asp-validation-for="VendorID" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="HandyMan_FirstName" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="HandyMan_FirstName" class="form-control" />
+                <span asp-validation-for="HandyMan_FirstName" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="HandyMan_LastName" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="HandyMan_LastName" class="form-control" />
+                <span asp-validation-for="HandyMan_LastName" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="PrimaryContactNo" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="PrimaryContactNo" class="form-control" />
+                <span asp-validation-for="PrimaryContactNo" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="SecondaryContactNo" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="SecondaryContactNo" class="form-control" />
+                <span asp-validation-for="SecondaryContactNo" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Address" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Address" class="form-control" />
+                <span asp-validation-for="Address" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Gender" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Gender" class="form-control" />
+                <span asp-validation-for="Gender" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="DOJ" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="DOJ" class="form-control" />
+                <span asp-validation-for="DOJ" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="DOR" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="DOR" class="form-control" />
+                <span asp-validation-for="DOR" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Experties" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Experties" class="form-control" />
+                <span asp-validation-for="Experties" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Prvs_Org" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Prvs_Org" class="form-control" />
+                <span asp-validation-for="Prvs_Org" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Govt_ID_Proof" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Govt_ID_Proof" class="form-control" />
+                <span asp-validation-for="Govt_ID_Proof" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="DocsSubmitted" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="DocsSubmitted" class="form-control" />
+                <span asp-validation-for="DocsSubmitted" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Rating" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Rating" class="form-control" />
+                <span asp-validation-for="Rating" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Remarks" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Remarks" class="form-control" />
+                <span asp-validation-for="Remarks" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Photograph" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Photograph" class="form-control" />
+                <span asp-validation-for="Photograph" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+</form>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

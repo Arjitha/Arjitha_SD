@@ -1,0 +1,42 @@
+@model Arjitha.Models.ResidentRechargeHistory
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ResidentRechargeHistory</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Tran_ID)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Tran_ID)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CreditRechargeDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CreditRechargeDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.RechargeAmount)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.RechargeAmount)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Remarks)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Remarks)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Resident_ID">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

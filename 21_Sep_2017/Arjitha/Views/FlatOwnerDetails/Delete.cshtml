@@ -1,0 +1,65 @@
+@model Arjitha.Models.FlatOwnerDetails
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>FlatOwnerDetails</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <input type="hidden" asp-for="OwnerID" />
+        <dt>
+            @Html.DisplayNameFor(model => model.OwnerFirstName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.OwnerFirstName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.OwnerLastName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.OwnerLastName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.OwnerAddress)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.OwnerAddress)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.OwnerContactNumber)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.OwnerContactNumber)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.OwnerAlternateContactNumber)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.OwnerAlternateContactNumber)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.OwnerEmail)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.OwnerEmail)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Remarks)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Remarks)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            <a asp-action="Index">Back to List</a>
+        </div>
+    </form>
+</div>

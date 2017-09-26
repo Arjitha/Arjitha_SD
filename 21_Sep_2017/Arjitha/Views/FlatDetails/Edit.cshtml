@@ -1,0 +1,127 @@
+@model Arjitha.Models.FlatDetails
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2>Edit</h2>
+
+<form asp-action="Edit">
+    <div class="form-horizontal">
+        <h4>FlatDetails</h4>
+        <hr />
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <input type="hidden" asp-for="Flat_ID" />
+        <div class="form-group">
+            <label asp-for="Flat_No" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Flat_No" class="form-control" />
+                <span asp-validation-for="Flat_No" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Floor" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Floor" class="form-control" />
+                <span asp-validation-for="Floor" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Block" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Block" class="form-control" />
+                <span asp-validation-for="Block" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="FlatBuyDate" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="FlatBuyDate" class="form-control" />
+                <span asp-validation-for="FlatBuyDate" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="BHKs" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="BHKs" class="form-control" />
+                <span asp-validation-for="BHKs" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="CurrentStatus" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="CurrentStatus" class="form-control" />
+                <span asp-validation-for="CurrentStatus" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="FlatInchargeFirstName" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="FlatInchargeFirstName" class="form-control" />
+                <span asp-validation-for="FlatInchargeFirstName" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="FlatInchargeLastName" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="FlatInchargeLastName" class="form-control" />
+                <span asp-validation-for="FlatInchargeLastName" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="FlatInchargeContactNumber" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="FlatInchargeContactNumber" class="form-control" />
+                <span asp-validation-for="FlatInchargeContactNumber" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="FlatInchargeAlternateContactNumber" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="FlatInchargeAlternateContactNumber" class="form-control" />
+                <span asp-validation-for="FlatInchargeAlternateContactNumber" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="FlatInchargeEmail" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="FlatInchargeEmail" class="form-control" />
+                <span asp-validation-for="FlatInchargeEmail" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="AnnualMaintainaceCharges" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="AnnualMaintainaceCharges" class="form-control" />
+                <span asp-validation-for="AnnualMaintainaceCharges" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="OwnerID" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="OwnerID" class="form-control" />
+                <span asp-validation-for="OwnerID" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Remarks" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Remarks" class="form-control" />
+                <span asp-validation-for="Remarks" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+</form>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,114 @@
+@model Arjitha.Models.Vendors_HandyMan_Details
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Vendors_HandyMan_Details</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.VendorID)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.VendorID)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.HandyMan_FirstName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.HandyMan_FirstName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.HandyMan_LastName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.HandyMan_LastName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PrimaryContactNo)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PrimaryContactNo)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.SecondaryContactNo)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.SecondaryContactNo)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Address)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Address)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Gender)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Gender)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DOJ)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DOJ)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DOR)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DOR)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Experties)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Experties)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Prvs_Org)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Prvs_Org)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Govt_ID_Proof)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Govt_ID_Proof)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DocsSubmitted)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DocsSubmitted)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Rating)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Rating)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Remarks)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Remarks)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Photograph)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Photograph)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.HandyMan_ID">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

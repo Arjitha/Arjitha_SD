@@ -1,0 +1,53 @@
+@model IEnumerable<Arjitha.Models.ResidentRechargeHistory>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Tran_ID)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CreditRechargeDate)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.RechargeAmount)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Remarks)
+                </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Tran_ID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreditRechargeDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RechargeAmount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Remarks)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Resident_ID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Resident_ID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Resident_ID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
